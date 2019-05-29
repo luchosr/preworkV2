@@ -32,10 +32,13 @@
   }
 } */
 
+@import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-size: 14px;
+  font-family: "Inconsolata", monospace;
 }
 .App {
   display: flex;

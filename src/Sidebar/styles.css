@@ -4,4 +4,24 @@
   flex-direction: column;
   width: 140px;
   background-color: #44475a;
+  font-size: 0.9em;
+}
+.sidebar__links__section {
+  margin-top: 5px;
+}
+.sidebar__link__icon {
+  padding: 3.5px;
+  margin: 5px;
+  border-radius: 3px;
+}
+.sidebar__link {
+  margin: 10px 10px 10px 7px;
+  display: flex;
+  flex-direction: row;
+}
+.sidebar__link a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 9px 5px 0 2px;
 }

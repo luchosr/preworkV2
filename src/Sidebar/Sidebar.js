@@ -5,7 +5,9 @@ import "./styles.css";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <Link color="blue" text="hola que tal" icon="FontAwesomeIcon" />
+      <div className="sidebar__links__section">
+        <Link color="#8be9fd" text="settings" icon="wrench" />
+      </div>
     </div>
   );
 };
