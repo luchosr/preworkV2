@@ -37,3 +37,8 @@ body {
   padding: 0;
   overflow: hidden;
 }
+.App {
+  display: flex;
+  flex-direction: row;
+  height: 100vw;
+}
