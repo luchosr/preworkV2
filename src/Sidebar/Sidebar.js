@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "./Link";
 import "./styles.css";
+import logo, { ReactComponent as InitabLogo } from "./logo.svg";
 
 const Sidebar = () => {
   return (
@@ -15,7 +16,9 @@ const Sidebar = () => {
         <Link color="#E6DA74" text="help/intro" icon="question" />
       </div>
       <div className="sidebar__logo">
-        <div className="logoImage" />
+        <div className="logoImage">
+          <InitabLogo className="logo" />
+        </div>
       </div>
     </div>
   );
