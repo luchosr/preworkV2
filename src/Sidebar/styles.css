@@ -10,18 +10,21 @@
   margin-top: 5px;
 }
 .sidebar__link__icon {
+  font-size: 1em;
   padding: 3.5px;
   margin: 5px;
   border-radius: 3px;
+  color: #44475a;
 }
 .sidebar__link {
-  margin: 10px 10px 10px 7px;
+  margin: 10px 10px 10px 5px;
   display: flex;
   flex-direction: row;
 }
 .sidebar__link a {
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: 600;
+  font-size: 1em;
+  font-weight: 800;
   margin: 9px 5px 0 2px;
 }
