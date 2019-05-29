@@ -11,13 +11,13 @@
 }
 .sidebar__link__icon {
   font-size: 1em;
-  padding: 3.5px;
+  padding: 4px 3.5px;
   margin: 5px;
   border-radius: 3px;
   color: #44475a;
 }
 .sidebar__link {
-  margin: 10px 10px 10px 5px;
+  margin: 10px 6px 10px 5px;
   display: flex;
   flex-direction: row;
 }
