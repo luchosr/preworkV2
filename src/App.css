@@ -5,6 +5,7 @@ body {
   overflow: hidden;
   font-size: 14px;
   font-family: "Inconsolata", monospace;
+  background-color: #272a36;
 }
 .App {
   display: flex;

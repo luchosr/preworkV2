@@ -1,0 +1,12 @@
+.jsreddit {
+  width: 25%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.jsreddit__title {
+  color: #8be9fd;
+  margin: 40px 0 10px 0;
+  text-transform: uppercase;
+}
