@@ -1,5 +1,5 @@
 .sidebar {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   width: 140px;
@@ -29,10 +29,21 @@
   margin: 9px 5px 0 2px;
 }
 .sidebar__logo {
-  height: calc(100% - 150px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  height: calc(100% - 150px);
+  margin: 20px auto;
+}
+.socialmedia {
+  display: flex;
+  flex-direction: row;
+}
+.socialmedia a {
+  color: #fafafa;
+  padding: 10px;
+}
+.logoImage {
   margin: 0 auto;
 }
 .logo {

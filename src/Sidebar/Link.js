@@ -21,19 +21,17 @@ library.add(
   faQuestion
 );
 
-const Link = props => {
-  return (
-    <div className="sidebar__link">
-      <FontAwesomeIcon
-        icon={props.icon}
-        style={{ backgroundColor: props.color }}
-        className="sidebar__link__icon"
-      />
-      <a href="#" style={{ color: props.color }}>
-        {props.text}
-      </a>
-    </div>
-  );
-};
+const Link = props => (
+  <div className="sidebar__link">
+    <FontAwesomeIcon
+      icon={props.icon}
+      style={{ backgroundColor: props.color }}
+      className="sidebar__link__icon"
+    />
+    <a href="#" style={{ color: props.color }}>
+      {props.text}
+    </a>
+  </div>
+);
 
 export default Link;
