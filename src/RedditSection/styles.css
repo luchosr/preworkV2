@@ -10,3 +10,11 @@
   margin: 40px 0 10px 0;
   text-transform: uppercase;
 }
+
+.jsreddit__ulist {
+  list-style-type: none;
+}
+
+.jsreddit__item__title {
+  color: #f8f8f2;
+}
