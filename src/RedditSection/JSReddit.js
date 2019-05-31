@@ -48,6 +48,8 @@ class JSReddit extends React.Component {
                 score={post.data.score}
               />
             ))}
+          {error && <h2 style={{ color: "red" }}>{error}</h2>}
+          {isLoading && <h2 style={{ color: "blue" }}>loading ....</h2>}
         </ul>
       </div>
     );
