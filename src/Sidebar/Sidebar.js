@@ -1,15 +1,12 @@
 import React from "react";
 import Link from "./Link";
 import "./styles.css";
-import logo, { ReactComponent as InitabLogo } from "./logo.svg";
+import { ReactComponent as InitabLogo } from "./logo.svg";
 import SocialMedia from "./SocialMedia.js";
 import {
-  faFacebook,
   faFacebookF,
   faTwitter,
-  faReddit,
   faRedditAlien,
-  faLinkedin,
   faLinkedinIn
 } from "@fortawesome/free-brands-svg-icons";
 
