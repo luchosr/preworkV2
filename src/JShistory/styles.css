@@ -1,7 +1,15 @@
 .jshistory {
-  height: 100vh;
+  max-height: 100vh;
   width: 49%;
   text-align: center;
+}
+.jshistory__links {
+  max-height: 49%;
+  overflow: auto;
+  border-bottom: 1px solid #44475a;
+}
+.jshistory__links::-webkit-scrollbar {
+  display: none;
 }
 .jshistory__title {
   margin: 40px 0 10px 0;
@@ -9,6 +17,26 @@
   text-transform: uppercase;
   font-size: 16px;
 }
+
 .jshistory__links__list {
   margin-top: 40px;
+  list-style-type: none;
+  text-decoration: none;
+}
+.item {
+  margin-bottom: 19px;
+  width: 100%;
+}
+.item__link {
+  text-decoration: none;
+  color: #6272a4;
+  font-size: 14px;
+  width: calc(75% - 24px);
+  text-align: left;
+  margin-right: 5%;
+}
+.time {
+  color: #999;
+  text-align: right;
+  margin-left: 10%;
 }

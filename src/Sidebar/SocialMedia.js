@@ -1,7 +1,6 @@
 import React from "react";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStroopwafel } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faTwitter,
@@ -12,7 +11,7 @@ library.add(faFacebook, faTwitter, faReddit);
 
 const SocialMedia = props => (
   <div>
-    <a href="#" className="smIcon">
+    <a href="https://www.javascript.info" className="smIcon">
       <FontAwesomeIcon
         style={{
           backgroundColor: props.bckColor,

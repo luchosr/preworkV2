@@ -6,8 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 library.add(faJsSquare);
 
 const Item = props => (
-  <li>
-    <FontAwesomeIcon icon="js-square" />
+  <li className="item">
+    <FontAwesomeIcon
+      icon={faJsSquare}
+      style={{ color: "rgb(230, 218, 116)", marginRight: "10px" }}
+    />
     <a href="" className="item__link">
       {props.title}
     </a>
