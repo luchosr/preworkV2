@@ -40,3 +40,9 @@
   text-align: right;
   margin-left: 10%;
 }
+.jshistory__clock {
+  display: flex;
+  height: 51%;
+  align-items: center;
+  justify-content: center;
+}

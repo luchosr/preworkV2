@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./styles.css";
 import Item from "./Item";
 import HistoryData from "./HistoryData";
+import Clock from "./Clock";
 import { faJsSquare } from "@fortawesome/free-brands-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,6 +23,9 @@ class JShistory extends Component {
             Relevant javascript history
           </h4>
           <ul className="jshistory__links__list">{listItems}</ul>
+        </div>
+        <div className="jshistory__clock">
+          <Clock />
         </div>
       </div>
     );
