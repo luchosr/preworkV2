@@ -49,11 +49,28 @@
 .timer {
   font-family: "Helvetica Neue", sans-serif;
   color: #6272a4;
+  text-align: center;
+}
+
+.timer__messaje__hider {
+  color: #ffb86c;
+  font-weight: 600;
+}
+.timer__messaje span {
+  color: #ffb86c;
+  margin: 5px;
 }
 .timer__hour {
   font-size: 120px;
   font-weight: 400;
+  margin-bottom: 0px;
+}
+.timer__date {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 300;
 }
 .timer__hour__zone {
   font-size: 32px;
+  margin: 0;
 }
