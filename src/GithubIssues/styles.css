@@ -1,0 +1,65 @@
+.githubIssues {
+  height: 100vh;
+  width: 25%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.issuesSection {
+  max-height: calc(100% - 140px);
+  padding: 0 20px 0 0;
+  margin-left: 20px;
+  border-bottom: 1px solid #44475a;
+}
+.title {
+  color: #8be9fd;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 40px 0 2px 0;
+}
+.subtitle {
+  color: #6272a4;
+  text-decoration: none;
+  font-size: 12px;
+}
+.changeSub {
+  margin-top: 24px;
+  color: #f1fa8c;
+  font-size: 13px;
+  margin-right: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.changeSub span {
+  color: #ff79c6;
+}
+.repo {
+  color: #6272a4;
+  font-size: 14px;
+  margin: 0 0 4px 0;
+  line-height: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.repolink {
+  text-decoration: none;
+}
+.issuesList {
+  margin-top: 40px;
+}
+.issueTitle {
+  color: #f8f8f2;
+  margin: 0;
+}
+.issues {
+  padding: 0 10px;
+  list-style-type: none;
+  margin-bottom: 40px;
+  text-align: left;
+  border-left: 3px solid #6272a4;
+}
+.issueNumber {
+  color: #f1fa8c;
+  font-size: 14px;
+  margin: 0 0 4px 0;
+}
