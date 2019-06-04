@@ -46,3 +46,14 @@
   align-items: center;
   justify-content: center;
 }
+.timer {
+  font-family: "Helvetica Neue", sans-serif;
+  color: #6272a4;
+}
+.timer__hour {
+  font-size: 120px;
+  font-weight: 400;
+}
+.timer__hour__zone {
+  font-size: 32px;
+}
