@@ -55,6 +55,7 @@
 .timer__messaje__hider {
   color: #ffb86c;
   font-weight: 600;
+  cursor: pointer;
 }
 .timer__messaje span {
   color: #ffb86c;
