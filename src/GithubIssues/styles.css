@@ -10,6 +10,8 @@
   padding: 0 20px 0 0;
   margin-left: 20px;
   border-bottom: 1px solid #44475a;
+  overflow: auto;
+  width: 100%;
 }
 .title {
   color: #8be9fd;
@@ -46,6 +48,7 @@
 }
 .issuesList {
   margin-top: 40px;
+  padding: 0 0 0 3px;
 }
 .issueTitle {
   color: #f8f8f2;
