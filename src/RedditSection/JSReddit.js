@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./styles.css";
 import RedditItem from "./RedditItem";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -7,19 +7,20 @@ import { faRedditAlien } from "@fortawesome/free-brands-svg-icons";
 
 library.add(faRedditAlien);
 
-class JSReddit extends React.Component {
-  state = {
-    error: null,
-    isLoading: false,
-    redditPost: []
-  };
+const JSReddit =() => {
+
+const [error, seterror] = useState(null);
+const [isLoading, setisLoading] = useState(false);
+const [redditPost, setredditPost] = useState([]);
+
+
   componentDidMount() {
     this.fetchRedditPosts();
   }
 
-  fetchRedditPosts = () => {
+  fetchRedditPosts = async () => {
     this.setState({ isLoading: true });
-    fetch("https://www.reddit.com/r/javascript.json")
+    await fetch("https://www.reddit.com/r/javascript.json")
       .then(response => response.json())
       .then(response => {
         const { children } = response.data;

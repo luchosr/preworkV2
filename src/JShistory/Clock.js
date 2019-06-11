@@ -32,6 +32,26 @@ class Clock extends Component {
   };
 
   render() {
+    const setHour = () => {
+      let hour = parseInt(
+        this.state.date.toLocaleTimeString(navigator.language, {
+          hour: "2-digit"
+        }),
+        10
+      );
+      return hour <= 12 ? hour : hour - 12;
+    };
+
+    let minutes = this.state.date.toLocaleTimeString(navigator.language, {
+      minute: "2-digit"
+    });
+
+    let amPm = () =>
+      parseInt(
+        this.state.date.toLocaleTimeString(navigator.language, {
+          hour: "2-digit"
+        })
+      );
     return (
       <div className="timer">
         <h2 className="timer__hour">
