@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
 import Item from "./Item";
 import HistoryData from "./HistoryData";
