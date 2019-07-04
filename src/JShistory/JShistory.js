@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import "./styles.css";
 import Item from "./Item";
 import HistoryData from "./HistoryData";
@@ -10,26 +10,24 @@ import { faClock } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faClock, faJsSquare);
 
-class JShistory extends Component {
-  render() {
-    const listItems = HistoryData.map(data => (
-      <Item id={data.id} timeAgo={data.timeAgo} title={data.title} />
-    ));
-    return (
-      <div className="jshistory">
-        <div className="jshistory__links">
-          <h4 className="jshistory__title">
-            <FontAwesomeIcon icon="clock" style={{ marginRight: "6px" }} />
-            Relevant javascript history
-          </h4>
-          <ul className="jshistory__links__list">{listItems}</ul>
-        </div>
-        <div className="jshistory__clock">
-          <Clock />
-        </div>
+const JShistory = () => {
+  const listItems = HistoryData.map(data => (
+    <Item id={data.id} timeAgo={data.timeAgo} title={data.title} />
+  ));
+  return (
+    <div className="jshistory">
+      <div className="jshistory__links">
+        <h4 className="jshistory__title">
+          <FontAwesomeIcon icon="clock" style={{ marginRight: "6px" }} />
+          Relevant javascript history
+        </h4>
+        <ul className="jshistory__links__list">{listItems}</ul>
       </div>
-    );
-  }
-}
+      <div className="jshistory__clock">
+        <Clock />
+      </div>
+    </div>
+  );
+};
 
 export default JShistory;
