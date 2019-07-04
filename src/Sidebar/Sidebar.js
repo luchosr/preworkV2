@@ -28,9 +28,9 @@ const Sidebar = () => (
       </div>
       <div className="socialmedia">
         <SocialMedia bckColor="#3C5A99" icon={faFacebookF} />
-        <SocialMedia bckColor="#3C5A99" icon={faLinkedinIn} />
+        <SocialMedia bckColor="#007FB1" icon={faLinkedinIn} />
         <SocialMedia bckColor="#1DA1F2" icon={faTwitter} />
-        <SocialMedia bckColor="#cee3f8" icon={faRedditAlien} />
+        <SocialMedia bckColor="#5296dd" icon={faRedditAlien} />
       </div>
     </div>
   </div>
