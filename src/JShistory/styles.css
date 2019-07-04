@@ -34,6 +34,11 @@
   width: calc(75% - 24px);
   text-align: left;
   margin-right: 5%;
+  transition: color 0.2s;
+}
+
+.item__link:hover {
+  color: #f1fa8c;
 }
 .time {
   color: #999;

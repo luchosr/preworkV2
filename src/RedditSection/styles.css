@@ -26,7 +26,11 @@
   text-align: left;
   margin: 0 0 40px 0;
   padding-left: 10px;
-  border-left: 3px solid #6272a4;
+  border-left: 3px solid #44475a;
+  transition: border-left-color 0.5s;
+}
+.jsreddit__item:hover {
+  border-left-color: #50fa7b;
 }
 .jsreddit__item__title {
   font-size: 14px;
