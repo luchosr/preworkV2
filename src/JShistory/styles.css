@@ -26,6 +26,7 @@
 .item {
   margin-bottom: 19px;
   width: 100%;
+  text-align: left;
 }
 .item__link {
   text-decoration: none;
@@ -35,6 +36,7 @@
   text-align: left;
   margin-right: 5%;
   transition: color 0.2s;
+  white-space: nowrap;
 }
 
 .item__link:hover {
