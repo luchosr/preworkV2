@@ -25,7 +25,7 @@ const Link = props => (
   <div className="sidebar__link">
     <FontAwesomeIcon
       icon={props.icon}
-      style={{ backgroundColor: props.color }}
+      style={{ backgroundColor: props.color, padding: "3px 6px 3px 6px" }}
       className="sidebar__link__icon"
     />
     <a href="https://javascript.info" style={{ color: props.color }}>
