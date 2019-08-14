@@ -69,6 +69,7 @@
   margin: 5px;
 }
 .timer__hour {
+  margin-top: 30px;
   font-size: 120px;
   font-weight: 400;
   margin-bottom: 0px;
