@@ -13,7 +13,6 @@ const Clock = () => {
   const [hideParagraph, sethideParagraph] = useState(
     localStorage.getItem('hideParagraph')
   );
-  const [amPm, setAmPm] = useState(undefined);
 
   useEffect(() => {
     const clockInterval = setInterval(() => tick(), 60000);
@@ -39,7 +38,6 @@ const Clock = () => {
       10
     );
 
-    hour > 12 ? setAmPm('AM') : setAmPm('PM');
     return hour <= 12 ? hour : hour - 12;
   };
 
@@ -51,7 +49,9 @@ const Clock = () => {
     <div className="timer">
       <h2 className="timer__hour">
         {setHour()}:{parseInt(minutes) < 10 ? 0 + minutes : minutes}
-        <span className="timer__hour__zone">{amPm}</span>
+        <span className="timer__hour__zone">
+          {setHour() > 12 ? 'AM' : 'PM'}
+        </span>
       </h2>
       <h5 className="timer__date"> {date.toDateString()}</h5>
 
