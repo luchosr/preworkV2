@@ -28,7 +28,7 @@ const GithubIssues = () => {
               repo={issue.repo}
               issueNumber={issue.issueNumber}
               issue={issue.issue}
-              id={issue.index}
+              key={issue.index}
             />
           ))}
         </ul>
