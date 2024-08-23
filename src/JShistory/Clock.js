@@ -5,7 +5,6 @@ import {
   faQuestionCircle,
   faTimesCircle,
 } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 library.add(faQuestionCircle, faTimesCircle);
 
@@ -14,6 +13,7 @@ const Clock = () => {
   const [hideParagraph, sethideParagraph] = useState(
     localStorage.getItem('hideParagraph')
   );
+  const [amPm, setAmPm] = useState(undefined);
 
   useEffect(() => {
     const clockInterval = setInterval(() => tick(), 60000);
@@ -39,6 +39,8 @@ const Clock = () => {
       }),
       10
     );
+
+    hour > 12 ? setAmPm('AM') : setAmPm('PM');
     return hour <= 12 ? hour : hour - 12;
   };
 
@@ -46,31 +48,12 @@ const Clock = () => {
     minute: '2-digit',
   });
 
-  let amPm = () => {
-    let date = new Date();
-
-    let hours = date.getHours();
-    let minutes = date.getMinutes();
-
-    // Check whether AM or PM
-    let newformat = hours >= 12 ? 'PM' : 'AM';
-
-    // Find current hour in AM-PM Format
-    hours = hours % 12;
-
-    // To display "0" as "12"
-    hours = hours ? hours : 12;
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-
-    console.log(hours + ':' + minutes + ' ' + newformat);
-  };
-
   console.log('el amp pm es ', parseInt(date.toDateString()));
   return (
     <div className="timer">
       <h2 className="timer__hour">
         {setHour()}:{parseInt(minutes) < 10 ? 0 + minutes : minutes}
-        <span className="timer__hour__zone">PM</span>
+        <span className="timer__hour__zone">{amPm}</span>
       </h2>
       <h5 className="timer__date"> {date.toDateString()}</h5>
 
