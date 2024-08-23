@@ -18,7 +18,6 @@ const Clock = () => {
   useEffect(() => {
     const clockInterval = setInterval(() => tick(), 60000);
     return function cleanup() {
-      console.log('cleaning up');
       clearInterval(clockInterval);
     };
   }, []);
@@ -48,7 +47,6 @@ const Clock = () => {
     minute: '2-digit',
   });
 
-  console.log('el amp pm es ', parseInt(date.toDateString()));
   return (
     <div className="timer">
       <h2 className="timer__hour">
