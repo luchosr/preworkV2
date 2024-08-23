@@ -8,7 +8,7 @@ import { faRedditAlien } from '@fortawesome/free-brands-svg-icons';
 library.add(faRedditAlien);
 
 const JSReddit = () => {
-  const [error, seterror] = useState(null);
+  const [error, setError] = useState(null);
   const [isLoading, setisLoading] = useState(false);
   const [redditPost, setredditPost] = useState([]);
 
@@ -24,8 +24,8 @@ const JSReddit = () => {
       const { children } = data;
       setredditPost(children);
     } catch (error) {
+      setError(error);
       console.error('OOPPS!, you got an error: ', error);
-      seterror(error);
     } finally {
       setisLoading(false);
     }
@@ -48,7 +48,11 @@ const JSReddit = () => {
               score={post.data.score}
             />
           ))}
-        {error && <h2 style={{ color: 'red' }}>{error}</h2>}
+        {error && (
+          <h2 style={{ color: 'red' }}>
+            Uh oh! there's an error here, please try again in a few minutes
+          </h2>
+        )}
         {isLoading && <h2 style={{ color: 'blue' }}>loading ....</h2>}
       </ul>
     </section>

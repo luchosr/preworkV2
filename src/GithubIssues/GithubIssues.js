@@ -9,7 +9,6 @@ import Issues from './Issues';
 library.add(faGithubAlt);
 
 const GithubIssues = () => {
-  // const issues =
   return (
     <div className="githubIssues">
       <div className="issuesSection">
