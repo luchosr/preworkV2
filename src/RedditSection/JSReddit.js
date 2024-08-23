@@ -24,6 +24,7 @@ const JSReddit = () => {
       const { children } = data;
       setredditPost(children);
     } catch (error) {
+      console.error('OOPPS!, you got an error: ', error);
       seterror(error);
     } finally {
       setisLoading(false);
