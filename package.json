@@ -8,13 +8,14 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "i": "^0.3.6",
-    "npm": "^6.9.0",
+    "npm": "^10.8.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "react-scripts dev",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
