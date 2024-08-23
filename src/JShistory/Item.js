@@ -1,15 +1,15 @@
-import React from "react";
-import { faJsSquare } from "@fortawesome/free-brands-svg-icons";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React from 'react';
+import { faJsSquare } from '@fortawesome/free-brands-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 library.add(faJsSquare);
 
-const Item = props => (
-  <li className="item">
+const Item = (props) => (
+  <li className="item" key={props.id}>
     <FontAwesomeIcon
       icon={faJsSquare}
-      style={{ color: "rgb(230, 218, 116)", marginRight: "10px" }}
+      style={{ color: 'rgb(230, 218, 116)', marginRight: '10px' }}
     />
     <a href="" className="item__link">
       {props.title}

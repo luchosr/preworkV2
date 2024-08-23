@@ -1,22 +1,26 @@
-import React, { useState, useEffect } from "react";
-import Paragraph from "./Paragraph";
-import { library } from "@fortawesome/fontawesome-svg-core";
+import React, { useState, useEffect } from 'react';
+import Paragraph from './Paragraph';
+import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faQuestionCircle,
-  faTimesCircle
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+  faTimesCircle,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 library.add(faQuestionCircle, faTimesCircle);
 
 const Clock = () => {
   const [date, setdate] = useState(new Date());
   const [hideParagraph, sethideParagraph] = useState(
-    localStorage.getItem("hideParagraph")
+    localStorage.getItem('hideParagraph')
   );
 
   useEffect(() => {
-    setInterval(() => tick(), 60000);
+    const clockInterval = setInterval(() => tick(), 60000);
+    return function cleanup() {
+      console.log('cleaning up');
+      clearInterval(clockInterval);
+    };
   }, []);
 
   const tick = () => {
@@ -24,14 +28,14 @@ const Clock = () => {
   };
 
   const hideParagraphFn = () => {
-    sethideParagraph("hideParagraph");
-    localStorage.setItem("hideParagraph", "true");
+    sethideParagraph('hideParagraph');
+    localStorage.setItem('hideParagraph', 'true');
   };
 
   const setHour = () => {
     let hour = parseInt(
       date.toLocaleTimeString(navigator.language, {
-        hour: "2-digit"
+        hour: '2-digit',
       }),
       10
     );
@@ -39,20 +43,34 @@ const Clock = () => {
   };
 
   let minutes = date.toLocaleTimeString(navigator.language, {
-    minute: "2-digit"
+    minute: '2-digit',
   });
 
-  let amPm = () =>
-    parseInt(
-      date.toLocaleTimeString(navigator.language, {
-        hour: "2-digit"
-      })
-    );
+  let amPm = () => {
+    let date = new Date();
+
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+
+    // Check whether AM or PM
+    let newformat = hours >= 12 ? 'PM' : 'AM';
+
+    // Find current hour in AM-PM Format
+    hours = hours % 12;
+
+    // To display "0" as "12"
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+
+    console.log(hours + ':' + minutes + ' ' + newformat);
+  };
+
+  console.log('el amp pm es ', parseInt(date.toDateString()));
   return (
     <div className="timer">
       <h2 className="timer__hour">
         {setHour()}:{parseInt(minutes) < 10 ? 0 + minutes : minutes}
-        <span className="timer__hour__zone">PM</span>{" "}
+        <span className="timer__hour__zone">PM</span>
       </h2>
       <h5 className="timer__date"> {date.toDateString()}</h5>
 

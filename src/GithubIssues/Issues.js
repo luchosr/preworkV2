@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
-const Issues = props => {
+const Issues = (props) => {
   return (
-    <li className="issues">
+    <li className="issues" key={props.id}>
       <a href="" className="repoLink">
         <h5 className="repo">Repo: {props.repo}</h5>
       </a>

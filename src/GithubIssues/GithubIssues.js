@@ -1,21 +1,15 @@
-import React from "react";
-import "./styles.css";
-import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import IssuesData from "./IssuesData";
-import Issues from "./Issues";
+import React from 'react';
+import './styles.css';
+import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import IssuesData from './IssuesData';
+import Issues from './Issues';
 
 library.add(faGithubAlt);
 
 const GithubIssues = () => {
-  const issues = IssuesData.map(issue => (
-    <Issues
-      repo={issue.repo}
-      issueNumber={issue.issueNumber}
-      issue={issue.issue}
-    />
-  ));
+  // const issues =
   return (
     <div className="githubIssues">
       <div className="issuesSection">
@@ -28,7 +22,16 @@ const GithubIssues = () => {
         <div className="changeSub">
           Issues <span>Pull requests</span>
         </div>
-        <ul className="issuesList">{issues}</ul>
+        <ul className="issuesList">
+          {IssuesData?.map((issue) => (
+            <Issues
+              repo={issue.repo}
+              issueNumber={issue.issueNumber}
+              issue={issue.issue}
+              id={issue.index}
+            />
+          ))}
+        </ul>
       </div>
     </div>
   );
