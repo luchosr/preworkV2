@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "./Link";
 import "./styles.css";
-import { ReactComponent as InitabLogo } from "./logo.svg";
-import SocialMedia from "./SocialMedia.js";
+import logo from "./logo.svg";
+import SocialMedia from "./SocialMedia";
 import {
   faFacebookF,
   faTwitter,
@@ -24,7 +24,7 @@ const Sidebar = () => (
     </div>
     <div className="sidebar__logo">
       <div className="logoImage">
-        <InitabLogo className="logo" />
+        <img src={logo} className="logo" alt="logo" />
       </div>
       <div className="socialmedia">
         <SocialMedia bckColor="#3C5A99" icon={faFacebookF} />
